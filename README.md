@@ -14,7 +14,7 @@
 	display: flex;
 }
 ```
-
+will be processed to:
 ```css
 .foo {
 	-js-display: flex;
