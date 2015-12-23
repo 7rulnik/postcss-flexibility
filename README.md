@@ -1,6 +1,9 @@
 # PostCSS Flexibility
 
-[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+[![NPM version][npm-img]][npm-url]
+[![Build Status][travis-img]][travis-url]
+[![Dependency Status][daviddm-img]][daviddm-url]
+[![XO code style][xo-img]][xo-url]
 
 
 [PostCSS] plugin for [Flexibility](https://github.com/10up/flexibility).
