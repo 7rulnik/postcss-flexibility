@@ -22,7 +22,7 @@
     "postcss": "^5.0.10"
   },
   "devDependencies": {
-    "ava": "^0.8.0",
+    "ava": "^0.9.0",
     "eslint": "^1.10.2",
     "eslint-config-xo": "^0.9.1"
   },
