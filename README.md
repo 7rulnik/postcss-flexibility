@@ -36,8 +36,8 @@ postcss([ require('postcss-flexibility') ])
 
 See [PostCSS] docs for examples for your environment.
 
-If you use [Autoprefixer], put postcss-flexibility after it.
-When [this issue](https://github.com/postcss/autoprefixer/issues/608) will be closed you could simple
+If you use [Autoprefixer] right now, you should put postcss-flexibility after it.
+When [this issue](https://github.com/postcss/autoprefixer/issues/608) is closed you'll be able to put [Autoprefixer] before too.
 
 ```js
 postcss([
