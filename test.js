@@ -12,5 +12,9 @@ function run(t, input, output) {
 }
 
 test('-js-display and display', t => {
-	return run(t, 'a { display: flex }', 'a { -js-display: flex; display: flex }');
+	return run(
+		t,
+		'a {display: -webkit-flex;display: -ms-flexbox;display: flex}',
+		'a {display: -webkit-flex;display: -ms-flexbox;-js-display: flex;display: flex}'
+	);
 });
