@@ -1,7 +1,8 @@
 .gitignore
-
-node_modules/
-npm-debug.log
-
-test/
+test.js
 .travis.yml
+node_modules
+coverage
+.nyc_output
+.DS_Store
+*.log

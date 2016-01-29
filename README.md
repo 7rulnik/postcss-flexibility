@@ -3,6 +3,7 @@
 [![NPM version][npm-img]][npm-url]
 [![Build Status][travis-img]][travis-url]
 [![Dependency Status][daviddm-img]][daviddm-url]
+[![Code coverage status][coveralls-img]][coveralls-url]
 [![XO code style][xo-img]][xo-url]
 
 
@@ -54,3 +55,5 @@ MIT © [Valentin Semirulnik](https://twitter.com/7rulnik)
 [npm-url]: https://www.npmjs.com/package/postcss-flexibility
 [xo-img]: https://img.shields.io/badge/code_style-XO-5ed9c7.svg
 [xo-url]: https://github.com/sindresorhus/xo
+[coveralls-img]: https://coveralls.io/repos/github/7rulnik/postcss-flexibility/badge.svg?branch=master
+[coveralls-url]: https://coveralls.io/github/7rulnik/postcss-flexibility?branch=master

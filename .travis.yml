@@ -4,3 +4,6 @@ node_js:
   - stable
   - "4"
   - "0.12"
+
+after_success:
+  - './node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls'

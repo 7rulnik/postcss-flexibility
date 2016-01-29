@@ -2,6 +2,7 @@
   "name": "postcss-flexibility",
   "version": "1.0.1",
   "description": "PostCSS plugin for Flexibility polyfill",
+  "main": "index.js",
   "keywords": [
     "postcss",
     "css",
@@ -11,7 +12,7 @@
     "polyfill",
     "flexibility"
   ],
-  "author": "Valentin Semirulnik <v7rulnik@gmail.com>",
+  "author": "Valentin Semirulnik <v7rulnik@gmail.com> (https://7rulnik.me/)",
   "license": "MIT",
   "repository": "7rulnik/postcss-flexibility",
   "bugs": {
@@ -23,10 +24,12 @@
   },
   "devDependencies": {
     "ava": "^0.11.0",
+    "coveralls": "^2.11.6",
     "eslint": "^1.10.2",
-    "eslint-config-xo": "^0.9.1"
+    "eslint-config-xo": "^0.9.1",
+    "nyc": "^5.5.0"
   },
   "scripts": {
-    "test": "ava && eslint *.js"
+    "test": "nyc ava && eslint *.js"
   }
 }
