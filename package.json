@@ -23,7 +23,7 @@
     "postcss": "^5.0.10"
   },
   "devDependencies": {
-    "ava": "^0.11.0",
+    "ava": "^0.12.0",
     "coveralls": "^2.11.6",
     "eslint": "^2.1.0",
     "eslint-config-xo": "^0.10.1",
