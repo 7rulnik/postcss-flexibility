@@ -1,3 +1,7 @@
+## 1.0.3
+* Fix issue with add node if it's already exist
+* Rewrite for ES6
+
 ## 1.0.2
 * Add code coverage.
 * Update README.
