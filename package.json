@@ -1,6 +1,6 @@
 {
   "name": "postcss-flexibility",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "PostCSS plugin for Flexibility polyfill",
   "main": "index.es5.js",
   "files": [
