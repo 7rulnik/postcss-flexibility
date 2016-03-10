@@ -1,12 +1,18 @@
-var postcss = require('postcss');
+import postcss from 'postcss';
 
-module.exports = postcss.plugin('postcss-flexibility', function () {
-	return function (css) {
-		css.walkDecls('display', function (decl) {
-			var value = decl.value;
-			if (value && value === 'flex') {
-				decl.cloneBefore({prop: '-js-display', value: 'flex'});
-			}
-		});
-	};
+const postcssFlexibility = postcss.plugin('postcss-flexibility', () => css => {
+	css.walkRules(rule => {
+		const jsDisplayExist = rule.some(({prop}) => prop === '-js-display');
+
+		if (!jsDisplayExist) {
+			rule.walkDecls('display', decl => {
+				const {value} = decl;
+				if (value === 'flex') {
+					decl.cloneBefore({prop: '-js-display'});
+				}
+			});
+		}
+	});
 });
+
+export default postcssFlexibility;

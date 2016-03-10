@@ -11,10 +11,29 @@ function run(t, input, output) {
 		});
 }
 
-test('-js-display and display', t => {
+test('Add "-js-display: flex" if "display: flex" present', t => {
 	return run(
 		t,
-		'a {display: -webkit-flex;display: -ms-flexbox;display: flex}',
-		'a {display: -webkit-flex;display: -ms-flexbox;-js-display: flex;display: flex}'
+		`a {
+			display: flex;
+		}`,
+		`a {
+			-js-display: flex;
+			display: flex;
+		}`
+	);
+});
+
+test('Don\'add "-js-display: flex" if it\'s already exist', t => {
+	return run(
+		t,
+		`a {
+			-js-display: flex;
+			display: flex;
+		}`,
+		`a {
+			-js-display: flex;
+			display: flex;
+		}`
 	);
 });
