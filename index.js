@@ -2,9 +2,11 @@ import postcss from 'postcss';
 
 const postcssFlexibility = postcss.plugin('postcss-flexibility', () => css => {
 	css.walkRules(rule => {
-		const jsDisplayExist = rule.some(({prop}) => prop === '-js-display');
+		const isDisabled = rule.some(({prop, text}) =>
+			prop === '-js-display' || text === 'flexibility-disable'
+		);
 
-		if (!jsDisplayExist) {
+		if (!isDisabled) {
 			rule.walkDecls('display', decl => {
 				const {value} = decl;
 				if (value === 'flex') {

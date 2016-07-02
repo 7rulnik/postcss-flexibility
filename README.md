@@ -38,6 +38,23 @@ postcss([ require('postcss-flexibility') ])
 
 See [PostCSS] docs for examples for your environment.
 
+### Excluding rules
+
+You can exclude rule from transformation by adding `/* flexibility-disable */` comment.
+
+```css
+.foo {
+	/* flexibility-disable */
+	display: flex;
+}
+```
+will be processed to:
+```css
+.foo {
+	/* flexibility-disable */
+	display: flex;
+}
+```
 
 --
 

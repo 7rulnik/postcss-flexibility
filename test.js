@@ -6,8 +6,8 @@ import plugin from './';
 function run(t, input, output) {
 	return postcss([plugin()]).process(input)
 		.then(result => {
-			t.same(result.css, output);
-			t.same(result.warnings().length, 0);
+			t.deepEqual(result.css, output);
+			t.deepEqual(result.warnings().length, 0);
 		});
 }
 
@@ -33,6 +33,20 @@ test('Don\'add "-js-display: flex" if it\'s already exist', t => {
 		}`,
 		`a {
 			-js-display: flex;
+			display: flex;
+		}`
+	);
+});
+
+test('Don\'add "-js-display: flex" if comment "flexibility-disable" is exist', t => {
+	return run(
+		t,
+		`a {
+			/* flexibility-disable */
+			display: flex;
+		}`,
+		`a {
+			/* flexibility-disable */
 			display: flex;
 		}`
 	);
