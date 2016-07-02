@@ -1,3 +1,6 @@
+## 1.1.0
+* Add ability for exclude rules from transformation
+
 ## 1.0.3
 * Fix issue with add node if it's already exist
 * Rewrite for ES6
