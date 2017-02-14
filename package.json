@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/7rulnik/postcss-flexibility",
   "dependencies": {
-    "postcss": "^5.1.0"
+    "postcss": "^5.2.13"
   },
   "devDependencies": {
     "ava": "^0.17.0",
