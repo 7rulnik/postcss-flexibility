@@ -35,7 +35,7 @@
     "chokidar-cli": "^1.2.0",
     "coveralls": "^2.11.11",
     "eslint": "^3.0.1",
-    "eslint-config-xo": "^0.17.0",
+    "eslint-config-xo": "^0.18.0",
     "eslint-plugin-babel": "^3.1.0",
     "eslint-plugin-require-path-exists": "^1.1.5",
     "estraverse-fb": "^1.3.1",
