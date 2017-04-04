@@ -3,7 +3,7 @@ import postcss from 'postcss';
 const postcssFlexibility = postcss.plugin('postcss-flexibility', () => css => {
 	css.walkRules(rule => {
 		const isDisabled = rule.some(({prop, text}) =>
-			prop === '-js-display' || text === 'flexibility-disable'
+			prop === '-js-display' || text === 'flexibility-disable' || text === '! flexibility-disable'
 		);
 
 		if (!isDisabled) {
