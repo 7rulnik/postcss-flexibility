@@ -26,7 +26,7 @@
     "postcss": "^5.1.0"
   },
   "devDependencies": {
-    "ava": "^0.17.0",
+    "ava": "^0.19.0",
     "babel-cli": "^6.8.0",
     "babel-eslint": "^7.0.0",
     "babel-plugin-add-module-exports": "^0.2.0",
@@ -35,12 +35,12 @@
     "chokidar-cli": "^1.2.0",
     "coveralls": "^2.11.11",
     "eslint": "^3.0.1",
-    "eslint-config-xo": "^0.17.0",
-    "eslint-plugin-babel": "^3.1.0",
+    "eslint-config-xo": "^0.18.1",
+    "eslint-plugin-babel": "^4.1.1",
     "eslint-plugin-require-path-exists": "^1.1.5",
     "estraverse-fb": "^1.3.1",
-    "npm-run-all": "^3.0.0",
-    "nyc": "^9.0.1",
+    "npm-run-all": "^4.0.2",
+    "nyc": "^10.2.0",
     "rimraf": "^2.5.2"
   },
   "scripts": {
@@ -48,7 +48,7 @@
     "coverage": "nyc -r=text -r=lcov npm test",
     "precoveralls": "npm run coverage",
     "coveralls": "coveralls < coverage/lcov.info",
-    "test": "ava --require babel-register",
+    "test": "ava",
     "tdd": "npm test -- --watch",
     "lint": "eslint index.js test.js",
     "transpile": "babel index.js --out-file index.es5.js",
@@ -56,5 +56,10 @@
     "clean": "rimraf index.es5.js",
     "push": "git push --follow-tags",
     "postpublish": "npm-run-all clean push"
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ]
   }
 }
