@@ -51,3 +51,17 @@ test('Don\'add "-js-display: flex" if comment "flexibility-disable" is exist', t
 		}`
 	);
 });
+
+test('Don\'add "-js-display: flex" if comment "! flexibility-disable" is exist', t => {
+	return run(
+		t,
+		`a {
+			/*! flexibility-disable */
+			display: flex;
+		}`,
+		`a {
+			/*! flexibility-disable */
+			display: flex;
+		}`
+	);
+});
