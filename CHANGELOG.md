@@ -1,3 +1,6 @@
+## 1.1.1
+* Support exclude rules via loud comments `/*! flexibility-disable */` ([@simoneldevig](https://github.com/simoneldevig) - [#101](https://github.com/7rulnik/postcss-flexibility/pull/101))
+
 ## 1.1.0
 * Add ability for exclude rules from transformation
 
