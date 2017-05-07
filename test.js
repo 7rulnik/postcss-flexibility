@@ -24,6 +24,19 @@ test('Add "-js-display: flex" if "display: flex" present', t => {
 	);
 });
 
+test('Add "-js-display: inline-flex" if "display: inline-flex" present', t => {
+	return run(
+		t,
+		`a {
+			display: inline-flex;
+		}`,
+		`a {
+			-js-display: inline-flex;
+			display: inline-flex;
+		}`
+	);
+});
+
 test('Don\'add "-js-display: flex" if it\'s already exist', t => {
 	return run(
 		t,
