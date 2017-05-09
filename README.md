@@ -1,5 +1,7 @@
 # PostCSS Flexibility
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/7rulnik/postcss-flexibility.svg)](https://greenkeeper.io/)
+
 [![NPM version][npm-img]][npm-url]
 [![Build Status][travis-img]][travis-url]
 [![Dependency Status][daviddm-img]][daviddm-url]
