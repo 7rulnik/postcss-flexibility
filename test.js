@@ -78,3 +78,27 @@ test('Don\'add "-js-display: flex" if comment "! flexibility-disable" is exist',
 		}`
 	);
 });
+
+test('Don\'add "-js-display: flex" for prefixed version', t => {
+	return run(
+		t,
+		`a {
+			display: -webkit-flex;
+			display: flex;
+		}
+		b {
+			display: -moz-inline-flex;
+			display: inline-flex;
+		}`,
+		`a {
+			display: -webkit-flex;
+			-js-display: flex;
+			display: flex;
+		}
+		b {
+			display: -moz-inline-flex;
+			-js-display: inline-flex;
+			display: inline-flex;
+		}`
+	);
+});

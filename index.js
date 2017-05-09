@@ -9,7 +9,7 @@ const postcssFlexibility = postcss.plugin('postcss-flexibility', () => css => {
 		if (!isDisabled) {
 			rule.walkDecls('display', decl => {
 				const {value} = decl;
-				if (/flex/.test(value)) {
+				if (/^flex$|^inline-flex$/.test(value)) {
 					decl.cloneBefore({prop: '-js-display'});
 				}
 			});
