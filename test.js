@@ -24,6 +24,19 @@ test('Add "-js-display: flex" if "display: flex" present', t => {
 	);
 });
 
+test('Add "-js-display: inline-flex" if "display: inline-flex" present', t => {
+	return run(
+		t,
+		`a {
+			display: inline-flex;
+		}`,
+		`a {
+			-js-display: inline-flex;
+			display: inline-flex;
+		}`
+	);
+});
+
 test('Don\'add "-js-display: flex" if it\'s already exist', t => {
 	return run(
 		t,
@@ -62,6 +75,30 @@ test('Don\'add "-js-display: flex" if comment "! flexibility-disable" is exist',
 		`a {
 			/*! flexibility-disable */
 			display: flex;
+		}`
+	);
+});
+
+test('Don\'add "-js-display: flex" for prefixed version', t => {
+	return run(
+		t,
+		`a {
+			display: -webkit-flex;
+			display: flex;
+		}
+		b {
+			display: -moz-inline-flex;
+			display: inline-flex;
+		}`,
+		`a {
+			display: -webkit-flex;
+			-js-display: flex;
+			display: flex;
+		}
+		b {
+			display: -moz-inline-flex;
+			-js-display: inline-flex;
+			display: inline-flex;
 		}`
 	);
 });
