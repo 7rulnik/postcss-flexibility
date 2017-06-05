@@ -1,3 +1,7 @@
+## 1.1.2
+* Support `inline-flex` ([@idanen](https://github.com/idanen) - [#109](https://github.com/7rulnik/postcss-flexibility/pull/109))
+* Ugrade PostCSS to 6.0.1
+
 ## 1.1.1
 * Support exclude rules via loud comments `/*! flexibility-disable */` ([@simoneldevig](https://github.com/simoneldevig) - [#101](https://github.com/7rulnik/postcss-flexibility/pull/101))
 
