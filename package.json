@@ -34,7 +34,7 @@
     "babel-register": "^6.6.5",
     "chokidar-cli": "^1.2.0",
     "coveralls": "^2.13.1",
-    "eslint": "^3.0.1",
+    "eslint": "^4.18.2",
     "eslint-config-xo": "^0.18.2",
     "eslint-plugin-babel": "^4.1.1",
     "eslint-plugin-require-path-exists": "^1.1.7",
