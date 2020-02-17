@@ -1,6 +1,10 @@
 {
     "extends": "xo/esnext",
+    "env": {
+        "jest": true
+    },
     "plugins": [
-      "require-path-exists"
+        "jest",
+        "require-path-exists"
     ]
 }

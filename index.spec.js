@@ -11,7 +11,7 @@ function run(input, output) {
 }
 
 test('Add "-js-display: flex" if "display: flex" present', () => {
-    return run(
+	return run(
 		`a {
             display: flex;
         }`,
