@@ -1,32 +1,29 @@
 import postcss from 'postcss';
-import test from 'ava';
 
 import plugin from './';
 
-function run(t, input, output) {
+function run(input, output) {
 	return postcss([plugin()]).process(input)
 		.then(result => {
-			t.deepEqual(result.css, output);
-			t.deepEqual(result.warnings().length, 0);
+			expect(result.css).toEqual(output);
+			expect(result.warnings().length).toEqual(0);
 		});
 }
 
-test('Add "-js-display: flex" if "display: flex" present', t => {
+test('Add "-js-display: flex" if "display: flex" present', () => {
 	return run(
-		t,
 		`a {
-			display: flex;
-		}`,
+            display: flex;
+        }`,
 		`a {
-			-js-display: flex;
-			display: flex;
-		}`
+            -js-display: flex;
+            display: flex;
+        }`
 	);
 });
 
-test('Add "-js-display: inline-flex" if "display: inline-flex" present', t => {
+test('Add "-js-display: inline-flex" if "display: inline-flex" present', () => {
 	return run(
-		t,
 		`a {
 			display: inline-flex;
 		}`,
@@ -37,9 +34,8 @@ test('Add "-js-display: inline-flex" if "display: inline-flex" present', t => {
 	);
 });
 
-test('Don\'add "-js-display: flex" if it\'s already exist', t => {
+test('Don\'t add "-js-display: flex" if it\'s already exist', () => {
 	return run(
-		t,
 		`a {
 			-js-display: flex;
 			display: flex;
@@ -51,9 +47,8 @@ test('Don\'add "-js-display: flex" if it\'s already exist', t => {
 	);
 });
 
-test('Don\'add "-js-display: flex" if comment "flexibility-disable" is exist', t => {
+test('Don\'t add "-js-display: flex" if comment "flexibility-disable" is exist', () => {
 	return run(
-		t,
 		`a {
 			/* flexibility-disable */
 			display: flex;
@@ -65,9 +60,8 @@ test('Don\'add "-js-display: flex" if comment "flexibility-disable" is exist', t
 	);
 });
 
-test('Don\'add "-js-display: flex" if comment "! flexibility-disable" is exist', t => {
+test('Don\'t add "-js-display: flex" if comment "! flexibility-disable" is exist', () => {
 	return run(
-		t,
 		`a {
 			/*! flexibility-disable */
 			display: flex;
@@ -79,9 +73,8 @@ test('Don\'add "-js-display: flex" if comment "! flexibility-disable" is exist',
 	);
 });
 
-test('Don\'add "-js-display: flex" for prefixed version', t => {
+test('Don\'t add "-js-display: flex" for prefixed version', () => {
 	return run(
-		t,
 		`a {
 			display: -webkit-flex;
 			display: flex;
