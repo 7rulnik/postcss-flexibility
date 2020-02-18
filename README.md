@@ -27,7 +27,7 @@ will be processed to:
 ## Installation
 
 ```sh
-$ npm install --save-dev postcss-flexibility
+$ npm install --save-dev postcss postcss-flexibility
 ```
 
 ## Usage
