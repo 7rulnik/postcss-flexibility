@@ -22,9 +22,6 @@
         "url": "https://github.com/7rulnik/postcss-flexibility/issues"
     },
     "homepage": "https://github.com/7rulnik/postcss-flexibility",
-    "dependencies": {
-        "postcss": "^7.0.26"
-    },
     "devDependencies": {
         "@babel/cli": "^7.8.4",
         "@babel/core": "^7.8.4",
@@ -41,7 +38,11 @@
         "jest": "^25.1.0",
         "npm-run-all": "^4.1.5",
         "nyc": "^15.0.0",
+        "postcss": "^7.0.26",
         "rimraf": "^3.0.2"
+    },
+    "peerDependencies": {
+        "postcss": "^7.0.26"
     },
     "scripts": {
         "watch": "npm run transpile -- --watch",
@@ -61,5 +62,8 @@
         "transform": {
             "^.+\\.js$": "babel-jest"
         }
+    },
+    "engines": {
+        "node": ">=10.0.0"
     }
 }
