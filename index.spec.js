@@ -3,7 +3,7 @@ import postcss from 'postcss';
 import plugin from './';
 
 function run(input, output) {
-	return postcss([plugin()]).process(input)
+	return postcss([plugin()]).process(input, {from: undefined})
 		.then(result => {
 			expect(result.css).toEqual(output);
 			expect(result.warnings().length).toEqual(0);
