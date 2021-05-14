@@ -1,6 +1,6 @@
 import postcss from 'postcss';
 
-import plugin from './';
+const plugin = require('./');
 
 function run(input, output) {
 	return postcss([plugin()]).process(input, {from: undefined})
