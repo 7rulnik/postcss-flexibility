@@ -109,3 +109,32 @@ test('Don\'t add "-js-display: flex" for prefixed version', () => {
 		}`
 	);
 });
+
+test('Works with other PostCSS plugins', () => {
+	const changedSelector = 'bbb';
+
+	const otherPlugin = () => {
+		return {
+			postcssPlugin: 'test',
+			Rule(rule) {
+				rule.selector = changedSelector;
+			}
+		};
+	};
+	otherPlugin.postcss = true;
+
+	const result = postcss([otherPlugin(), plugin()]).process(
+		`aaa {
+			display: flex;
+		}`, {
+			from: undefined
+		});
+
+	expect(result.css).toEqual(
+		`${changedSelector} {
+			-js-display: flex;
+			display: flex;
+		}`
+	);
+	expect(result.warnings().length).toEqual(0);
+});
