@@ -1,3 +1,7 @@
+## 3.0.0
+* Drop PostCSS 7 and migrate to new Postcss 8 API ([@YozhEzhi](https://github.com/YozhEzhi) — [#141](https://github.com/7rulnik/postcss-flexibility/pull/141))
+* Drop node@10. Support node@12+.
+
 ## 2.0.0
 * Support `inline-flex` ([@idanen](https://github.com/idanen) - [#109](https://github.com/7rulnik/postcss-flexibility/pull/109))
 * Ugrade PostCSS to 6.0.1
